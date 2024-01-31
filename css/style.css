@@ -1,0 +1,28 @@
+:root {
+  --text-color-blue: #5179F8;
+  --text-color-gray: #383B43;
+
+  --bg-black-900: #000000;
+  --bg-black-600: #0F1015;
+  --bg-black-500: #1B1B1D;
+
+  --bg-white-900: #fff;
+  --bg-white-800: #FFEFEF;
+
+  --border-color-gray: #5C5757;
+  --border-color-white: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+============== Fonts ============== 
+font-family: 'Inter', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Flex', sans-serif; 
+===================================
+*/
