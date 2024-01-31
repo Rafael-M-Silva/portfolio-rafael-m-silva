@@ -3,6 +3,9 @@
   --text-color-gray: #383b43;
   --text-color-white: #fff;
 
+  --bg-gradient-main: linear-gradient(180deg, #4b4592 52.45%, #3c65cf 100%),
+    linear-gradient(180deg, #374dba 16.93%, #527afb 99.7%);
+
   --bg-black-900: #000000;
   --bg-black-700: #101116;
   --bg-black-600: #0f1015;
@@ -49,6 +52,7 @@ header {
 
   color: var(--text-color-white);
   margin-top: 38px;
+  margin-bottom: 52px;
 }
 
 header > .logo h1 {
@@ -74,4 +78,111 @@ header > .contato {
   display: flex;
   gap: 10px;
   align-items: center;
+}
+
+.home {
+  display: flex;
+  padding: 28px 30px 0 80px;
+  justify-content: space-between;
+  background: url(../img/bg-home.png), var(--bg-gradient-main);
+  border-radius: var(--Padding-Defualt, 32px);
+  overflow: hidden;
+}
+
+.home > .content {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+  color: var(--text-color-white);
+}
+
+.home > .content h1 {
+  font-family: "Roboto Flex", sans-serif;
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: 0.25rem;
+}
+
+.home > .content p {
+  color: var(--text-color-white);
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.home > .content > .buttons {
+  display: flex;
+  gap: 25px;
+}
+
+.home > .content > .buttons a:nth-child(3) {
+  animation: transition-button 0.6s linear;
+}
+
+.home > .content > .buttons a:nth-child(2) {
+  animation: transition-button 0.8s linear;
+}
+
+.home > .content > .buttons a:nth-child(1) {
+  animation: transition-button 1s linear;
+}
+
+@keyframes transition-button {
+  from {
+    transform: translate(-40vw);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
+.home > .content > .buttons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 89.699px;
+  height: 89.699px;
+  flex-shrink: 0;
+  border: 1px solid var(--bg-white-900);
+  border-radius: 100%;
+}
+
+.home > .image-developer {
+  width: 750px;
+  height: 700px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: url(../img/bg-developer.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.home > .image-developer img {
+  width: 530px;
+  margin-left: 70px;
+  margin-bottom: 40px;
+  animation: transition-developer 1s ease-in-out;
+}
+
+@keyframes transition-developer {
+  from {
+    transform: translateY(-40vw);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0);
+    opacity: 1;
+  }
 }
