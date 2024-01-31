@@ -53,6 +53,8 @@ header {
   color: var(--text-color-white);
   margin-top: 38px;
   margin-bottom: 52px;
+  z-index: 3;
+  position: relative;
 }
 
 header > .logo h1 {
@@ -104,6 +106,10 @@ header > .contato {
   font-weight: 400;
   line-height: 120%;
   letter-spacing: 0.25rem;
+}
+
+.home > .content h1, p, .home > .image-developer {
+  z-index: 1000;
 }
 
 .home > .content p {
@@ -175,6 +181,20 @@ header > .contato {
   margin-bottom: 40px;
   animation: transition-developer 1s ease-in-out;
 }
+
+.bg-ellipse {
+  width: 100%;
+  height: 660.028px;
+  position: absolute;
+  top: -240px;
+  left: 0;
+
+  border-radius: 1506.289px;
+  background: #0f1015;
+  filter: blur(60px);
+  z-index: 0;
+}
+
 
 @keyframes transition-developer {
   from {
