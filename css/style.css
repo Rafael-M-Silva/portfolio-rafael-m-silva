@@ -37,22 +37,21 @@ font-family: 'Roboto Flex', sans-serif;
 
 body {
   background: var(--bg-black-600);
+  /* padding: 0 4%; */
 }
 
 .bg-black {
-  margin: 0 4%;
-}
-
-.bg-gray {
-  padding: 80px 4%;
+  max-width: 1380px;
+  margin: auto;
 }
 
 header {
+  max-width: 1380px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 24px 64px;
-  margin: 0 4%;
+  margin: auto;
   gap: 32px;
 
   border-radius: 32px;
@@ -66,26 +65,26 @@ header {
   position: relative;
 }
 
-header > .logo h1 {
+header .logo h1 {
   font-size: 1rem;
   font-family: "Roboto Flex", sans-serif;
   font-weight: 400;
 }
 
-header > .navbar > ul {
+header .navbar ul {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 32px;
 }
 
-header > .navbar > ul > li > a,
-.contato > a {
+header .navbar ul li a,
+.contato a {
   color: var(--text-color-white);
   font-family: "Roboto", sans-serif;
 }
 
-header > .contato {
+header .contato {
   display: flex;
   gap: 10px;
   align-items: center;
@@ -101,8 +100,8 @@ header > .contato {
   margin-bottom: 100px;
 }
 
-.home > .content {
-  width: 40%;
+.home .content {
+  max-width: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -110,19 +109,19 @@ header > .contato {
   color: var(--text-color-white);
 }
 
-.home > .content h1 {
+.home .content h1 {
   font-family: "Roboto Flex", sans-serif;
-  font-size: 4rem;
+  font-size: 3.3rem;
   font-weight: 400;
-  line-height: 120%;
+  line-height: 144%;
   letter-spacing: 2px;
 }
 
-.home > .content h1, p, .home > .image-developer {
+.home .content h1, p, .home .image-developer {
   z-index: 1000;
 }
 
-.home > .content p {
+.home .content p {
   max-width: 500px;
   color: var(--text-color-white);
   font-family: Inter;
@@ -132,20 +131,20 @@ header > .contato {
   line-height: 150%;
 }
 
-.home > .content > .buttons {
+.home .content .buttons {
   display: flex;
   gap: 25px;
 }
 
-.home > .content > .buttons a:nth-child(3) {
+.home .content .buttons a:nth-child(3) {
   animation: transition-button 0.6s linear;
 }
 
-.home > .content > .buttons a:nth-child(2) {
+.home .content .buttons a:nth-child(2) {
   animation: transition-button 0.8s linear;
 }
 
-.home > .content > .buttons a:nth-child(1) {
+.home .content .buttons a:nth-child(1) {
   animation: transition-button 1s linear;
 }
 
@@ -160,7 +159,7 @@ header > .contato {
   }
 }
 
-.home > .content > .buttons a {
+.home .content .buttons a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -171,10 +170,9 @@ header > .contato {
   border-radius: 100%;
 }
 
-.home > .image-developer {
-  width: 750px;
-  height: 700px;
-
+.home .image-developer {
+  width: 55%;
+  height: 650px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -183,11 +181,9 @@ header > .contato {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  overflow: hidden;
 }
 
-.home > .image-developer img {
-  width: 530px;
+.home .image-developer img {
   margin-left: 70px;
   margin-bottom: 40px;
   animation: transition-developer 1s ease-in-out;
@@ -219,25 +215,32 @@ header > .contato {
 }
 
 .works {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
   background: var(--bg-black-500);
 }
 
-.works > .title {
+.works .geral {
+  width: 1380px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 2rem;
+  margin: auto;
+  padding: 80px 0;
 }
 
-.works > .title h1 {
+.works .title {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.works .title h1 {
   font-family: 'Roboto', sans-serif;
   color: var(--text-color-white);
   font-size: 3.75rem;
   font-weight: 400;
 }
 
-.works > .title a {
+.works .title a {
   padding: 20px 40px;
   display: flex;
   align-items: center;
@@ -249,7 +252,7 @@ header > .contato {
   border-radius: 32px;
 }
 
-.works > .two-projects {
+.works .two-projects {
   display: flex;
   gap: 32px;
   justify-content: space-between;
@@ -261,23 +264,23 @@ header > .contato {
   gap: 1rem;
 }
 
-.works > .two-projects > .project {
+.works .two-projects .project {
   width: 100%;
 }
 
-.works > .two-projects > .project img{
+.works .two-projects .project img{
   width: 100%;
   max-height: 600px;
   object-fit: cover;
   border-radius: 1rem;
 }
 
-.works .project > .settings {
+.works .project .settings {
   display: flex;
   gap: 1rem;
 }
 
-.works .project > .settings span {
+.works .project .settings span {
   border: 1px solid var(--bg-white-900);
   border-radius: 2rem;
   color: var(--text-color-white);
@@ -293,7 +296,7 @@ header > .contato {
   font-weight: 400;
 }
 
-.works > .one-project > .project img{
+.works .one-project .project img{
   max-height: 800px;
   object-fit: cover;
   border-radius: 1rem;
@@ -306,7 +309,7 @@ header > .contato {
   border-radius: 2rem;
 }
 
-.experience > .content {
+.experience .content {
   display: flex;
   gap: 2rem;
   padding: 120px 32px;
@@ -314,33 +317,33 @@ header > .contato {
   justify-content: space-between;
 }
 
-.experience > .content > .title {
+.experience .content .title {
   width: 639px;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
 
-.experience > .content > .title h2{
+.experience .content .title h2{
   font-family: 'Roboto Flex', sans-serif;
   font-weight: 400;
   font-size: 3.5rem;
 }
 
-.experience > .content > .title p {
+.experience .content .title p {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: 1.25rem;
 }
 
-.experience > .content > .title > .button-contact {
+.experience .content .title .button-contact {
   display: flex;
   gap: 1rem;
   align-items: center;
   font-family: 'Roboto Flex', sans-serif; 
 }
 
-.experience > .content > .title > .button-contact a {
+.experience .content .title .button-contact a {
   border-radius: 2rem;
   border: 1px solid var(--bg-white-900);
   padding: 20px 40px;
@@ -348,7 +351,7 @@ header > .contato {
   text-transform: uppercase;
 }
 
-.experience > .content > .title > .button-contact p {
+.experience .content .title .button-contact p {
   display: flex;
   flex-direction: column;
   font-size: .75rem;
