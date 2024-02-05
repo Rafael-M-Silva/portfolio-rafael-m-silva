@@ -37,15 +37,13 @@ font-family: 'Roboto Flex', sans-serif;
 
 body {
   background: var(--bg-black-600);
-  /* padding: 0 4%; */
 }
 
-.bg-black {
-  max-width: 1380px;
-  margin: auto;
+header, .home, .works, .experience {
+  padding: 0 4%;
 }
 
-header {
+header .padding-global {
   max-width: 1380px;
   display: flex;
   align-items: center;
@@ -90,7 +88,9 @@ header .contato {
   align-items: center;
 }
 
-.home {
+.home .padding-global {
+  max-width: 1380px;
+  margin: auto;
   display: flex;
   padding: 28px 30px 0 80px;
   justify-content: space-between;
@@ -117,7 +117,9 @@ header .contato {
   letter-spacing: 2px;
 }
 
-.home .content h1, p, .home .image-developer {
+.home .content h1,
+p,
+.home .image-developer {
   z-index: 1000;
 }
 
@@ -202,7 +204,6 @@ header .contato {
   z-index: 0;
 }
 
-
 @keyframes transition-developer {
   from {
     transform: translateY(-40vw);
@@ -218,8 +219,8 @@ header .contato {
   background: var(--bg-black-500);
 }
 
-.works .geral {
-  width: 1380px;
+.works .padding-global {
+  max-width: 1380px;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -234,7 +235,7 @@ header .contato {
 }
 
 .works .title h1 {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: var(--text-color-white);
   font-size: 3.75rem;
   font-weight: 400;
@@ -248,7 +249,7 @@ header .contato {
 
   background: var(--bg-white-900);
   color: var(--text-color-black);
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   border-radius: 32px;
 }
 
@@ -268,9 +269,9 @@ header .contato {
   width: 100%;
 }
 
-.works .two-projects .project img{
+.works .two-projects .project img {
   width: 100%;
-  max-height: 600px;
+  height: 480px;
   object-fit: cover;
   border-radius: 1rem;
 }
@@ -284,29 +285,38 @@ header .contato {
   border: 1px solid var(--bg-white-900);
   border-radius: 2rem;
   color: var(--text-color-white);
-  padding: .5rem 1rem;
-  font-family: 'Roboto', sans-serif;
-  font-size: .75rem;
+  padding: 0.5rem 1rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.75rem;
 }
 
 .works .project h2 {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: var(--text-color-white);
   font-size: 1.125rem;
   font-weight: 400;
 }
 
-.works .one-project .project img{
+.works .one-project .project img {
   max-height: 800px;
   object-fit: cover;
   border-radius: 1rem;
 }
 
 .experience {
-  background: var(--bg-black-900);
+  background: var(--bg-black-700);
+}
+
+.experience .padding-global {
   color: var(--text-color-white);
-  margin-top: 80px;
   border-radius: 2rem;
+  background: var(--bg-black-900);
+  max-width: 1380px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: auto;
+  margin-top: 80px;
 }
 
 .experience .content {
@@ -324,14 +334,14 @@ header .contato {
   gap: 1.5rem;
 }
 
-.experience .content .title h2{
-  font-family: 'Roboto Flex', sans-serif;
+.experience .content .title h2 {
+  font-family: "Roboto Flex", sans-serif;
   font-weight: 400;
   font-size: 3.5rem;
 }
 
 .experience .content .title p {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 1.25rem;
 }
@@ -340,7 +350,7 @@ header .contato {
   display: flex;
   gap: 1rem;
   align-items: center;
-  font-family: 'Roboto Flex', sans-serif; 
+  font-family: "Roboto Flex", sans-serif;
 }
 
 .experience .content .title .button-contact a {
@@ -354,13 +364,13 @@ header .contato {
 .experience .content .title .button-contact p {
   display: flex;
   flex-direction: column;
-  font-size: .75rem;
+  font-size: 0.75rem;
 }
 
 .experience .content-help {
   width: 700px;
-  margin-top: -32px;  
-  font-family: 'Roboto Flex', sans-serif;
+  margin-top: -32px;
+  font-family: "Roboto Flex", sans-serif;
   font-size: 2.5rem;
 }
 
