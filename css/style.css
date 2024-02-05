@@ -7,6 +7,8 @@
   --bg-gradient-main: linear-gradient(180deg, #4b4592 52.45%, #3c65cf 100%),
     linear-gradient(180deg, #374dba 16.93%, #527afb 99.7%);
 
+    --bg-gradient-second: linear-gradient(180deg, #527AFB 10%, #302b64 60%, #1A1A27 100%);
+
   --bg-black-900: #000000;
   --bg-black-700: #101116;
   --bg-black-600: #0f1015;
@@ -231,7 +233,6 @@ p,
 .works .title {
   display: flex;
   justify-content: space-between;
-  padding: 10px 0;
 }
 
 .works .title h1 {
@@ -251,6 +252,8 @@ p,
   color: var(--text-color-black);
   font-family: "Inter", sans-serif;
   border-radius: 32px;
+  text-transform: uppercase;
+  font-size: 0.75rem;
 }
 
 .works .two-projects {
@@ -321,7 +324,7 @@ p,
 
 .experience .content {
   display: flex;
-  gap: 2rem;
+  gap: 80px;
   padding: 120px 32px;
   border-radius: 2rem;
   justify-content: space-between;
@@ -344,6 +347,7 @@ p,
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 1.25rem;
+  line-height: 144%;
 }
 
 .experience .content .title .button-contact {
@@ -365,6 +369,7 @@ p,
   display: flex;
   flex-direction: column;
   font-size: 0.75rem;
+  
 }
 
 .experience .content-help {
@@ -379,5 +384,64 @@ p,
   border-bottom: 1px solid var(--bg-white-900);
 }
 
-.experience .content-help .accordion h3 {
+.about {
+  padding: 0 4%;
+  background: url(../img/bg-home.png), var(--bg-gradient-second);
+  border-radius: 2rem;
+}
+
+.about .padding-global {
+  padding: 120px 0;
+  max-width:1380px;
+  margin: auto;
+}
+
+.about .padding-global .container {
+  display: flex;
+}
+
+.about .padding-global .container .developer img {
+  width: 520px;
+  height: 620px;
+  object-fit: cover;
+  filter: grayscale(1);
+  border-radius: 1rem;
+}
+
+.about .padding-global .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+  gap: 2rem;
+}
+
+.about .padding-global .container .content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 557px;
+  color: var(--text-color-white);
+  justify-content: center;
+}
+
+.about .padding-global .container .content h1{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 3.75rem;
+}
+
+.about .padding-global .container .content p {
+  font-family: "Inter", sans-serif;
+  line-height: 144%;
+}
+
+.about .padding-global .container .content a {
+  width: 380px;
+  background: var(--bg-white-900);
+  color: var(--text-color-black);
+  padding: 20px 40px;
+  border-radius: 32px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  text-transform: uppercase;
 }
