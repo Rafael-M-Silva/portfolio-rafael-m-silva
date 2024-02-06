@@ -7,7 +7,12 @@
   --bg-gradient-main: linear-gradient(180deg, #4b4592 52.45%, #3c65cf 100%),
     linear-gradient(180deg, #374dba 16.93%, #527afb 99.7%);
 
-    --bg-gradient-second: linear-gradient(180deg, #527AFB 10%, #302b64 60%, #1A1A27 100%);
+  --bg-gradient-second: linear-gradient(
+    180deg,
+    #527afb 10%,
+    #302b64 60%,
+    #1a1a27 100%
+  );
 
   --bg-black-900: #000000;
   --bg-black-700: #101116;
@@ -41,7 +46,10 @@ body {
   background: var(--bg-black-600);
 }
 
-header, .home, .works, .experience {
+header,
+.home,
+.works,
+.experience {
   padding: 0 4%;
 }
 
@@ -369,7 +377,6 @@ p,
   display: flex;
   flex-direction: column;
   font-size: 0.75rem;
-  
 }
 
 .experience .content-help {
@@ -392,7 +399,7 @@ p,
 
 .about .padding-global {
   padding: 120px 0;
-  max-width:1380px;
+  max-width: 1380px;
   margin: auto;
 }
 
@@ -424,8 +431,8 @@ p,
   justify-content: center;
 }
 
-.about .padding-global .container .content h1{
-  font-family: 'Roboto', sans-serif;
+.about .padding-global .container .content h1 {
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 3.75rem;
 }
@@ -436,12 +443,60 @@ p,
 }
 
 .about .padding-global .container .content a {
-  width: 380px;
+  text-align: center;
   background: var(--bg-white-900);
   color: var(--text-color-black);
   padding: 20px 40px;
   border-radius: 32px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1.2rem;
   text-transform: uppercase;
+}
+
+.faqs {
+  padding: 0 4%;
+  background: var(--bg-black-600);
+}
+
+.faqs .padding-global {
+  max-width: 1380px;
+  padding: 64px 0;
+  margin: auto;
+}
+
+.faqs .padding-global .faq {
+  color: var(--text-color-white);
+  font-family: "Roboto", sans-serif;
+  border-bottom: 1px solid var(--bg-white-900);
+}
+
+.faqs .padding-global .faq p {
+  display: none;
+  padding-bottom: 30px;
+}
+
+.faqs .padding-global .faq .slide-down {
+  display: block;
+}
+
+.faqs .padding-global .faq .btn-slide-down {
+  transform: rotate(0deg);
+  transition: .1s linear;
+}
+
+.faqs .padding-global .faq  .btn-rotate {
+  transform: rotate(90deg);
+  transition: .1s linear;
+}
+
+.faqs .padding-global .faq h2 {
+  display: flex;
+  justify-content: space-between;
+  font-size: 3rem;
+  font-weight: 400;
+  padding: 32px 32px 32px 0;
+}
+
+.faqs .padding-global .faq h2 span {
+  cursor: pointer;
 }
