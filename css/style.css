@@ -21,6 +21,7 @@
 
   --bg-white-900: #fff;
   --bg-white-800: #ffefef;
+  --bg-white-700: #e8e7e7;
 
   --border-color-gray: #5c5757;
   --border-color-white: #fff;
@@ -143,20 +144,20 @@ p,
   line-height: 150%;
 }
 
-.home .content .buttons {
+.buttons {
   display: flex;
   gap: 25px;
 }
 
-.home .content .buttons a:nth-child(3) {
+.buttons a:nth-child(3) {
   animation: transition-button 0.6s linear;
 }
 
-.home .content .buttons a:nth-child(2) {
+.buttons a:nth-child(2) {
   animation: transition-button 0.8s linear;
 }
 
-.home .content .buttons a:nth-child(1) {
+.buttons a:nth-child(1) {
   animation: transition-button 1s linear;
 }
 
@@ -171,7 +172,7 @@ p,
   }
 }
 
-.home .content .buttons a {
+.buttons a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -391,7 +392,8 @@ p,
   border-bottom: 1px solid var(--bg-white-900);
 }
 
-.about {
+.about,
+.search-developer {
   padding: 0 4%;
   background: url(../img/bg-home.png), var(--bg-gradient-second);
   border-radius: 2rem;
@@ -458,7 +460,8 @@ p,
   background: var(--bg-black-600);
 }
 
-.faqs .padding-global {
+.faqs .padding-global,
+.search-developer .padding-global {
   max-width: 1380px;
   padding: 64px 0;
   margin: auto;
@@ -481,12 +484,12 @@ p,
 
 .faqs .padding-global .faq .btn-slide-down {
   transform: rotate(0deg);
-  transition: .1s linear;
+  transition: 0.1s linear;
 }
 
-.faqs .padding-global .faq  .btn-rotate {
+.faqs .padding-global .faq .btn-rotate {
   transform: rotate(90deg);
-  transition: .1s linear;
+  transition: 0.1s linear;
 }
 
 .faqs .padding-global .faq h2 {
@@ -499,4 +502,74 @@ p,
 
 .faqs .padding-global .faq h2 span {
   cursor: pointer;
+}
+
+.search-developer .padding-global {
+  display: flex;
+  height: 700px;
+  justify-content: space-between;
+  padding: 64px 20px;
+  align-items: center;
+}
+
+.search-developer .search {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 500px;
+  color: var(--text-color-white);
+}
+
+.search-developer .search h1 {
+  font-family: "Roboto Flex", sans-serif;
+  font-weight: 400;
+  line-height: 144%;
+  font-size: 3rem;
+  margin-bottom: 60px;
+}
+
+.search-developer .search p {
+  font-family: "Inter", sans-serif;
+  line-height: 144%;
+  font-size: 1.25rem;
+}
+
+.search-developer .qr-code {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.search-developer .qr-code h2 {
+  font-family: "Roboto Flex", sans-serif;
+  line-height: 144%;
+  font-weight: 400;
+  font-size: 2.75rem;
+  color: var(--text-color-white);
+}
+
+.search-developer .qr-code .card {
+  width: 345px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg-white-900);
+  border-radius: 56px;
+  padding: 48px;
+  gap: 48px;
+}
+
+.search-developer .qr-code .card img {
+  width: 188px;
+  height: 188px;
+}
+
+.search-developer .qr-code .card p {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.125rem;
+  color: var(--text-color-gray);
+  line-height: 144%;
 }
