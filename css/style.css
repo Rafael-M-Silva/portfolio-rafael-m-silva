@@ -56,7 +56,7 @@ header,
 }
 
 header .padding-global {
-  max-width: 1440px;
+  max-width: 1380px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -70,7 +70,7 @@ header .padding-global {
   background-color: var(--bg-black-700);
 
   color: var(--text-color-white);
-  margin-top: 0px;
+  margin-top: 10px;
   margin-bottom: 52px;
   z-index: 1000;
   position: relative;
@@ -87,10 +87,11 @@ header .padding-global {
 
 @keyframes animate-header {
   from {
+    border: 1px solid transparent;
     margin-top: 38px;
   }
   to {
-    margin-top: 0px;
+    margin-top: 10px;
   }
 }
 
@@ -114,10 +115,22 @@ header .navbar ul li a,
   font-family: "Roboto", sans-serif;
 }
 
+header .navbar ul li a:hover {
+  color: var(--text-color-blue);
+}
+
 header .contato {
   display: flex;
   gap: 10px;
   align-items: center;
+}
+
+header .contato span {
+  transition: 0.3s ease-in-out;
+}
+
+header .contato:hover span {
+  transform: translate(10px);
 }
 
 .home {
@@ -173,6 +186,11 @@ p,
 .buttons {
   display: flex;
   gap: 25px;
+}
+
+.buttons a:hover {
+  background: var(--bg-black-500);
+  border: none;
 }
 
 .buttons a:nth-child(3) {
@@ -320,6 +338,46 @@ p,
   gap: 1rem;
 }
 
+.works .project-img {
+  position: relative;
+}
+
+.works .project-img a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 0px;
+  height: 50px;
+  color: var(--text-color-white);
+  font-family: "Inter", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  border-radius: 100%;
+  background: var(--bg-black-500);
+  z-index: 4;
+
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 0.5s ease;
+}
+
+.works .project-img:hover a {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  opacity: 1;
+}
+
+.works .project-img a:hover {
+  background: var(--text-color-blue);
+  transition: 0.1s;
+}
+
 .works .two-projects .project {
   width: 100%;
 }
@@ -402,6 +460,7 @@ p,
 }
 
 .works .one-project .project img {
+  width: 100%;
   max-height: 800px;
   object-fit: cover;
   border-radius: 1rem;
