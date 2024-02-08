@@ -33,6 +33,7 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
+  scroll-behavior: smooth;
 }
 
 /*
@@ -55,7 +56,7 @@ header,
 }
 
 header .padding-global {
-  max-width: 1380px;
+  max-width: 1440px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -65,19 +66,39 @@ header .padding-global {
 
   border-radius: 32px;
   border: 1px solid var(--border-color-gray);
+  box-shadow: 0px 0px 10px var(--bg-black-700);
   background-color: var(--bg-black-700);
 
   color: var(--text-color-white);
-  margin-top: 38px;
+  margin-top: 0px;
   margin-bottom: 52px;
-  z-index: 3;
+  z-index: 1000;
   position: relative;
+
+  animation: animate-header linear 1ms;
+  animation-timeline: scroll();
+  animation-range: 0 100px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
-header .logo h1 {
+@keyframes animate-header {
+  from {
+    margin-top: 38px;
+  }
+  to {
+    margin-top: 0px;
+  }
+}
+
+header .logo a {
   font-size: 1rem;
   font-family: "Roboto Flex", sans-serif;
   font-weight: 400;
+  color: var(--text-color-white);
 }
 
 header .navbar ul {
@@ -99,6 +120,10 @@ header .contato {
   align-items: center;
 }
 
+.home {
+  margin-top: 146px;
+}
+
 .home .padding-global {
   max-width: 1380px;
   margin: auto;
@@ -118,6 +143,7 @@ header .contato {
   justify-content: center;
   gap: 24px;
   color: var(--text-color-white);
+  z-index: 2;
 }
 
 .home .content h1 {
@@ -131,7 +157,7 @@ header .contato {
 .home .content h1,
 p,
 .home .image-developer {
-  z-index: 1000;
+  z-index: 100;
 }
 
 .home .content p {
@@ -249,6 +275,20 @@ p,
   color: var(--text-color-white);
   font-size: 3.75rem;
   font-weight: 400;
+
+  animation: reveal 1s ease-in-out;
+  animation-timeline: view(80% 0%);
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
 }
 
 .works .title a {
@@ -263,6 +303,9 @@ p,
   border-radius: 32px;
   text-transform: uppercase;
   font-size: 0.75rem;
+
+  animation: reveal-right 1s ease-in-out;
+  animation-timeline: view(80% 0%);
 }
 
 .works .two-projects {
@@ -286,6 +329,55 @@ p,
   height: 480px;
   object-fit: cover;
   border-radius: 1rem;
+
+  animation: reveal-left 1s ease-in-out;
+  animation-timeline: view(80% 0%);
+  animation-range: cover 0% cover 40%;
+}
+
+.works .two-projects .project .photo-right {
+  animation: reveal-right 1s ease-in-out;
+  animation-timeline: view(80% 0%);
+  animation-range: cover 0% cover 40%;
+}
+
+.reveal-bottom {
+  animation: reveal-bottom 1s ease-in-out;
+  animation-timeline: view(80% 0%);
+  animation-range: cover 0% cover 40%;
+}
+
+@keyframes reveal-right {
+  from {
+    opacity: 0;
+    transform: translate(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes reveal-left {
+  from {
+    opacity: 0;
+    transform: translate(-80px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes reveal-bottom {
+  from {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
 }
 
 .works .project .settings {
@@ -504,6 +596,10 @@ p,
   cursor: pointer;
 }
 
+.search-developer {
+  border-radius: 2rem 2rem 0 0;
+}
+
 .search-developer .padding-global {
   display: flex;
   height: 700px;
@@ -572,4 +668,58 @@ p,
   font-size: 1.125rem;
   color: var(--text-color-gray);
   line-height: 144%;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  background: var(--bg-black-600);
+  color: var(--text-color-white);
+  padding: 40px;
+  gap: 10px;
+}
+
+footer p {
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+footer .buttons {
+  gap: 10px;
+}
+
+footer .copy {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+footer .copy p {
+  position: relative;
+}
+
+footer .copy p::after {
+  content: "";
+  width: 15px;
+  height: 1px;
+  background: var(--bg-white-900);
+  position: absolute;
+  right: -30px;
+  top: 8px;
+}
+
+footer .buttons a {
+  width: 30.699px;
+  height: 30.699px;
+  border: none;
+}
+
+footer .buttons a img {
+  width: 20.699px;
+  height: 20.699px;
 }
