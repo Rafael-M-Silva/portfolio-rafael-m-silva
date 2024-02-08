@@ -442,6 +442,8 @@ p,
   font-family: "Roboto Flex", sans-serif;
   font-weight: 400;
   font-size: 3.5rem;
+  animation: reveal 1s ease-in-out;
+  animation-timeline: view(80% 0%);
 }
 
 .experience .content .title p {
@@ -449,6 +451,9 @@ p,
   font-weight: 400;
   font-size: 1.25rem;
   line-height: 144%;
+
+  animation: reveal-left 1s ease-in-out;
+  animation-timeline: view(80% 0%);
 }
 
 .experience .content .title .button-contact {
@@ -456,6 +461,8 @@ p,
   gap: 1rem;
   align-items: center;
   font-family: "Roboto Flex", sans-serif;
+  animation: reveal-left 1s ease-in-out;
+  animation-timeline: view(80% 0%);
 }
 
 .experience .content .title .button-contact a {
@@ -484,6 +491,11 @@ p,
   border-bottom: 1px solid var(--bg-white-900);
 }
 
+.experience .content-help .accordion h3 {
+  animation: reveal-right 1s ease-in-out;
+  animation-timeline: view(80% 0%);
+}
+
 .about,
 .search-developer {
   padding: 0 4%;
@@ -507,6 +519,9 @@ p,
   object-fit: cover;
   filter: grayscale(1);
   border-radius: 1rem;
+
+  animation: reveal 1s ease-in-out;
+  animation-timeline: view(80% 0%);
 }
 
 .about .padding-global .container {
@@ -529,11 +544,17 @@ p,
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 3.75rem;
+
+  animation: reveal-right 1s ease-in-out;
+  animation-timeline: view(80% 0%);
 }
 
 .about .padding-global .container .content p {
   font-family: "Inter", sans-serif;
   line-height: 144%;
+
+  animation: reveal-right 1s ease-in-out;
+  animation-timeline: view(80% 0%);
 }
 
 .about .padding-global .container .content a {
@@ -590,6 +611,9 @@ p,
   font-size: 3rem;
   font-weight: 400;
   padding: 32px 32px 32px 0;
+
+  animation: reveal-left 1s ease-in-out;
+  animation-timeline: view(80% 0%);
 }
 
 .faqs .padding-global .faq h2 span {
@@ -622,12 +646,17 @@ p,
   line-height: 144%;
   font-size: 3rem;
   margin-bottom: 60px;
+  animation: reveal 1s ease-in-out;
+  animation-timeline: view(80% 0%);
 }
 
 .search-developer .search p {
   font-family: "Inter", sans-serif;
   line-height: 144%;
   font-size: 1.25rem;
+
+  animation: reveal-left 1s ease-in-out;
+  animation-timeline: view(80% 0%);
 }
 
 .search-developer .qr-code {
