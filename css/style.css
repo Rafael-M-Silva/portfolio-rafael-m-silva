@@ -665,7 +665,7 @@ p,
   transition: 0.1s linear;
 }
 
-.faqs .padding-global .faq h2 {
+.faqs .padding-global .faq summary {
   display: flex;
   justify-content: space-between;
   font-size: 3rem;
@@ -676,7 +676,7 @@ p,
   animation-timeline: view(80% 0%);
 }
 
-.faqs .padding-global .faq h2 span {
+.faqs .padding-global .faq summary span {
   cursor: pointer;
 }
 
