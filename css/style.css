@@ -130,6 +130,44 @@ header .contato span {
   transition: 0.3s ease-in-out;
 }
 
+header .menu {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  align-items: end;
+  cursor: pointer;
+}
+
+header .padding-global .menu-hidden {
+}
+
+header .menu div {
+  width: 30px;
+  height: 2px;
+  background: var(--bg-white-900);
+  transition: 0.3s ease-in-out;
+}
+
+header .menu div:nth-child(1) {
+  width: 30px;
+}
+header .menu div:nth-child(2) {
+  width: 25px;
+}
+header .menu div:nth-child(3) {
+  width: 20px;
+}
+
+header .menu:hover div:nth-child(1) {
+  width: 20px;
+}
+header .menu:hover div:nth-child(2) {
+  width: 25px;
+}
+header .menu:hover div:nth-child(3) {
+  width: 30px;
+}
+
 header .contato:hover span {
   transform: translate(10px);
 }
@@ -682,6 +720,7 @@ p,
 
 .faqs .padding-global .faq li {
   margin-bottom: 32px;
+  line-height: 1.6rem;
 }
 
 .faqs .padding-global .faq summary span {
@@ -871,6 +910,15 @@ footer .buttons a img {
 }
 
 @media screen and (max-width: 1000px) {
+  header .menu {
+    display: flex;
+  }
+
+  header .padding-global .navbar,
+  header .padding-global .contato {
+    display: none;
+  }
+
   .home .padding-global {
     flex-direction: column;
     align-items: center;
@@ -907,6 +955,10 @@ footer .buttons a img {
     animation: reveal-left 1s ease-in-out;
     animation-timeline: view(80% 0%);
   }
+
+  .faqs .padding-global .faq summary {
+    font-size: 2rem;
+  }
 }
 
 @media screen and (max-width: 850px) {
@@ -930,5 +982,11 @@ footer .buttons a img {
 
   .works .two-projects {
     flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .experience .content .title {
+    width: 100%;
   }
 }
